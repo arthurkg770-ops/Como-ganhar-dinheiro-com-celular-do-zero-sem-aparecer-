@@ -17,7 +17,6 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
 body{background:#000;color:#f5f5f5;overflow-x:hidden;}
 
-/* HERO */
 .hero{
     position:relative;
     padding:120px 20px;
@@ -28,28 +27,14 @@ body{background:#000;color:#f5f5f5;overflow-x:hidden;}
     content:'';
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,0.82);
+    background:rgba(0,0,0,0.85);
 }
 .hero *{position:relative;z-index:2;}
 
-h1{
-    font-family:'Playfair Display';
-    font-size:58px;
-    color:#d4af37;
-}
+h1{font-family:'Playfair Display';font-size:58px;color:#d4af37;}
+.hero p{color:#ccc;margin-top:10px;font-size:18px;max-width:700px;margin:auto;}
 
-.hero p{
-    color:#ccc;
-    margin-top:10px;
-    font-size:18px;
-    max-width:700px;
-    margin:auto;
-}
-
-.price{
-    margin-top:20px;
-    font-size:26px;
-}
+.price{margin-top:20px;font-size:26px;}
 .old{color:#888;text-decoration:line-through;margin-right:10px;}
 .new{color:#d4af37;font-size:40px;font-weight:bold;}
 
@@ -67,144 +52,90 @@ h1{
 }
 .btn:hover{transform:scale(1.06);}
 
-.badges{
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    margin-top:20px;
-    flex-wrap:wrap;
-}
-.badge{
-    background:#111;
-    border:1px solid #333;
-    padding:8px 12px;
-    border-radius:8px;
-    font-size:12px;
-    color:#ccc;
-}
+.badges{display:flex;justify-content:center;gap:10px;margin-top:20px;flex-wrap:wrap;}
+.badge{background:#111;border:1px solid #333;padding:8px 12px;border-radius:8px;font-size:12px;color:#ccc;}
 
-section{
-    padding:90px 20px;
-    max-width:1100px;
-    margin:auto;
-}
+section{padding:90px 20px;max-width:1100px;margin:auto;}
 
-h2{
-    font-family:'Playfair Display';
-    color:#d4af37;
-    text-align:center;
-    font-size:36px;
-    margin-bottom:30px;
-}
+h2{font-family:'Playfair Display';color:#d4af37;text-align:center;font-size:36px;margin-bottom:30px;}
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.card{background:#111;padding:22px;border-radius:16px;border:1px solid #222;transition:.3s;}
+.card:hover{border-color:#d4af37;transform:translateY(-7px);}
 
-.card{
-    background:#111;
-    padding:22px;
-    border-radius:16px;
-    border:1px solid #222;
-    transition:.3s;
-}
-.card:hover{
-    border-color:#d4af37;
-    transform:translateY(-7px);
-}
+.security{background:#0b0b0b;border-left:4px solid #d4af37;padding:22px;border-radius:12px;}
 
-.security{
-    background:#0b0b0b;
-    border-left:4px solid #d4af37;
-    padding:22px;
-    border-radius:12px;
-}
+footer{text-align:center;padding:30px;color:#777;border-top:1px solid #222;}
 
-footer{
-    text-align:center;
-    padding:30px;
-    color:#777;
-    border-top:1px solid #222;
-}
+.sticky{position:fixed;bottom:20px;right:20px;z-index:999;}
 
-.sticky{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    z-index:999;
-}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;}
+.gallery img{width:100%;border-radius:14px;border:1px solid #222;transition:.3s;}
+.gallery img:hover{transform:scale(1.05);border-color:#d4af37;}
 </style>
 </head>
 
 <body>
 
 <div class="hero">
+    <h1>Como Crescer no TikTok Rápido</h1>
+    <p>Domine o algoritmo do TikTok e viralize vídeos todos os dias</p>
 
-<h1>Como Crescer no TikTok Rápido</h1>
+    <div class="price">
+        <span class="old">R$49,90</span>
+        <span class="new">R$19,90</span>
+    </div>
 
-<p>Aprenda estratégias reais para viralizar vídeos e crescer do zero mesmo sem seguidores</p>
+    <a class="btn" href="https://pay.kiwify.com.br/fG2dVR4" target="_blank">QUERO ACESSO AGORA</a>
 
-<div class="price">
-<span class="old">R$49,90</span>
-<span class="new">R$19,90</span>
-</div>
-
-<a class="btn" href="https://pay.kiwify.com.br/fG2dVR4" target="_blank">
-QUERO ACESSO AGORA
-</a>
-
-<div class="badges">
-<div class="badge">🔒 Pagamento Seguro</div>
-<div class="badge">⚡ Acesso Imediato</div>
-<div class="badge">📱 Funciona no Celular</div>
-</div>
-
+    <div class="badges">
+        <div class="badge">🔒 Seguro</div>
+        <div class="badge">⚡ Instantâneo</div>
+        <div class="badge">📱 Mobile</div>
+    </div>
 </div>
 
 <section>
 <h2>🔥 O que você vai aprender</h2>
-
 <div class="grid">
-<div class="card">Como funciona o algoritmo do TikTok</div>
-<div class="card">Como viralizar vídeos do zero</div>
-<div class="card">Estratégias para crescer rápido</div>
-<div class="card">Como ganhar seguidores todos os dias</div>
-<div class="card">Como monetizar seu perfil</div>
-<div class="card">Erros que impedem crescimento</div>
+<div class="card">Algoritmo do TikTok</div>
+<div class="card">Vídeos virais</div>
+<div class="card">Crescimento rápido</div>
+<div class="card">Monetização</div>
 </div>
 </section>
 
 <section>
-<h2>🔒 Segurança do Pagamento</h2>
+<h2>📸 Galeria TikTok</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=800&q=80">
+</div>
+</section>
 
+<section>
+<h2>🔒 Segurança</h2>
 <div class="security">
-✔ Pagamento processado pela Kiwify<br>
-✔ Checkout seguro com SSL<br>
-✔ Entrega automática do e-book<br>
-✔ Sem risco de dados no site
+✔ Pagamento via Kiwify<br>
+✔ Checkout seguro SSL<br>
+✔ Entrega automática
 </div>
 </section>
 
 <section>
 <h2>💬 Depoimentos</h2>
-
 <div class="grid">
-<div class="card">"Meu primeiro vídeo viralizou em 2 dias!"</div>
-<div class="card">"Muito simples e direto ao ponto"</div>
-<div class="card">"Vale muito a pena pelo preço"</div>
+<div class="card">"Viralizei rápido!"</div>
+<div class="card">"Muito bom e simples."</div>
+<div class="card">"Vale a pena."</div>
 </div>
-
 </section>
 
-<footer>
-© 2026 TikTok Viral Elite
-</footer>
+<footer>© 2026 TikTok Viral Elite</footer>
 
-<a class="btn sticky" href="https://pay.kiwify.com.br/fG2dVR4" target="_blank">
-COMPRAR AGORA
-</a>
+<a class="btn sticky" href="https://pay.kiwify.com.br/fG2dVR4">COMPRAR AGORA</a>
 
 </body>
 </html>
