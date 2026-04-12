@@ -4,12 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TikTok Viral Elite - Crescimento e Monetização</title>
+<title>TikTok Viral Elite | Método Profissional</title>
 
-<meta name="description" content="Aprenda como crescer no TikTok rápido, viralizar vídeos e ganhar dinheiro com estratégias avançadas.">
-<meta property="og:title" content="TikTok Viral Elite - E-book Premium">
-<meta property="og:description" content="Estratégias reais para crescer no TikTok do zero.">
-<meta property="og:type" content="website">
+<meta name="description" content="Método profissional para crescer no TikTok rápido e viralizar vídeos.">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -17,89 +14,202 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
 body{background:#000;color:#f5f5f5;overflow-x:hidden;}
 
+/* HERO COM TIKTOK DE FUNDO (VÍDEO) */
 .hero{
     position:relative;
-    padding:120px 20px;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    background:url('https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&w=1800&q=80') center/cover;
+    padding:60px 20px;
+    overflow:hidden;
 }
+
+.hero video{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:0;
+    filter:brightness(0.4) contrast(1.1);
+}
+
 .hero::before{
     content:'';
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,0.85);
+    background:rgba(0,0,0,0.65);
+    z-index:1;
 }
-.hero *{position:relative;z-index:2;}
 
-h1{font-family:'Playfair Display';font-size:58px;color:#d4af37;}
-.hero p{color:#ccc;margin-top:10px;font-size:18px;max-width:700px;margin:auto;}
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:800px;
+}
+
+h1{
+    font-size:60px;
+    color:#d4af37;
+    font-family:'Playfair Display';
+}
+
+p{
+    color:#ccc;
+    margin-top:10px;
+    font-size:18px;
+}
 
 .price{margin-top:20px;font-size:26px;}
 .old{color:#888;text-decoration:line-through;margin-right:10px;}
-.new{color:#d4af37;font-size:40px;font-weight:bold;}
+.new{color:#d4af37;font-size:42px;font-weight:bold;}
 
 .btn{
     display:inline-block;
     margin-top:25px;
-    padding:18px 48px;
+    padding:18px 50px;
     background:linear-gradient(135deg,#d4af37,#b38b2d);
     color:#000;
     font-weight:bold;
     border-radius:14px;
     text-decoration:none;
     transition:.3s;
-    box-shadow:0 0 30px rgba(212,175,55,0.35);
+    box-shadow:0 0 35px rgba(212,175,55,0.35);
 }
-.btn:hover{transform:scale(1.06);}
 
-.badges{display:flex;justify-content:center;gap:10px;margin-top:20px;flex-wrap:wrap;}
-.badge{background:#111;border:1px solid #333;padding:8px 12px;border-radius:8px;font-size:12px;color:#ccc;}
+.btn:hover{transform:scale(1.08);}
 
-section{padding:90px 20px;max-width:1100px;margin:auto;}
+.badges{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
 
-h2{font-family:'Playfair Display';color:#d4af37;text-align:center;font-size:36px;margin-bottom:30px;}
+.badge{
+    background:#111;
+    border:1px solid #333;
+    padding:8px 12px;
+    border-radius:8px;
+    font-size:12px;
+    color:#ccc;
+}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
-.card{background:#111;padding:22px;border-radius:16px;border:1px solid #222;transition:.3s;}
-.card:hover{border-color:#d4af37;transform:translateY(-7px);}
+section{
+    padding:100px 20px;
+    max-width:1100px;
+    margin:auto;
+}
 
-.security{background:#0b0b0b;border-left:4px solid #d4af37;padding:22px;border-radius:12px;}
+h2{
+    text-align:center;
+    font-size:38px;
+    color:#d4af37;
+    font-family:'Playfair Display';
+    margin-bottom:30px;
+}
 
-footer{text-align:center;padding:30px;color:#777;border-top:1px solid #222;}
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
 
-.sticky{position:fixed;bottom:20px;right:20px;z-index:999;}
+.card{
+    background:#111;
+    padding:25px;
+    border-radius:16px;
+    border:1px solid #222;
+    transition:.3s;
+}
 
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;}
-.gallery img{width:100%;border-radius:14px;border:1px solid #222;transition:.3s;}
-.gallery img:hover{transform:scale(1.05);border-color:#d4af37;}
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#d4af37;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:12px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:14px;
+    border:1px solid #222;
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+    border-color:#d4af37;
+}
+
+.security{
+    background:#0b0b0b;
+    border-left:4px solid #d4af37;
+    padding:20px;
+    border-radius:12px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#777;
+    border-top:1px solid #222;
+}
+
+.sticky{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    z-index:999;
+}
 </style>
 </head>
 
 <body>
 
 <div class="hero">
-    <h1>Como Crescer no TikTok Rápido</h1>
-    <p>Domine o algoritmo do TikTok e viralize vídeos todos os dias</p>
 
-    <div class="price">
-        <span class="old">R$49,90</span>
-        <span class="new">R$19,90</span>
-    </div>
+<!-- TIKTOK STYLE BACKGROUND VIDEO -->
+<video autoplay muted loop>
+    <source src="https://cdn.coverr.co/videos/coverr-typing-on-phone-5670/1080p.mp4" type="video/mp4">
+</video>
 
-    <a class="btn" href="https://pay.kiwify.com.br/fG2dVR4" target="_blank">QUERO ACESSO AGORA</a>
+<div class="hero-content">
 
-    <div class="badges">
-        <div class="badge">🔒 Seguro</div>
-        <div class="badge">⚡ Instantâneo</div>
-        <div class="badge">📱 Mobile</div>
-    </div>
+<h1>Domine o TikTok</h1>
+
+<p>Estratégias reais para viralizar vídeos e crescer do zero</p>
+
+<div class="price">
+<span class="old">R$49,90</span>
+<span class="new">R$19,90</span>
+</div>
+
+<a class="btn" href="https://pay.kiwify.com.br/fG2dVR4" target="_blank">QUERO ACESSO AGORA</a>
+
+<div class="badges">
+<div class="badge">🔒 Seguro</div>
+<div class="badge">⚡ Instantâneo</div>
+<div class="badge">📱 Mobile</div>
+</div>
+
+</div>
+
 </div>
 
 <section>
 <h2>🔥 O que você vai aprender</h2>
 <div class="grid">
 <div class="card">Algoritmo do TikTok</div>
-<div class="card">Vídeos virais</div>
+<div class="card">Como viralizar vídeos</div>
 <div class="card">Crescimento rápido</div>
 <div class="card">Monetização</div>
 </div>
@@ -108,10 +218,10 @@ footer{text-align:center;padding:30px;color:#777;border-top:1px solid #222;}
 <section>
 <h2>📸 Galeria TikTok</h2>
 <div class="gallery">
-<img src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?auto=format&fit=crop&w=800&q=80">
-<img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&w=800&q=80">
-<img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=800&q=80">
-<img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb">
+<img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868">
+<img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc">
+<img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb">
 </div>
 </section>
 
