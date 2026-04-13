@@ -3,248 +3,347 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>💰 Como Ganhar Dinheiro com Celular</title>
+<title>Ganhe Dinheiro com Celular - Método Premium</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif}
-body{background:#020202;color:#f5f5f5;line-height:1.6;overflow-x:hidden}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Montserrat,sans-serif;
+scroll-behavior:smooth;
+}
 
-/* TOP BAR */
-.topbar{
-background:#d4af37;
-color:#000;
-text-align:center;
-padding:8px;
-font-size:13px;
-font-weight:600;
+body{
+background:#000;
+color:#fff;
+}
+
+/* FUNDO */
+.bg{
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at top, rgba(212,175,55,0.22), transparent 55%),
+radial-gradient(circle at bottom, rgba(212,175,55,0.08), transparent 60%);
+z-index:-1;
 }
 
 /* HERO */
 .hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
 text-align:center;
-padding:80px 20px;
-background:radial-gradient(circle at top,#0c0c0c,#000);
+padding:90px 20px 40px;
 }
 
-.container{max-width:1100px;margin:auto}
-
-h1{
-font-size:64px;
-font-family:'Playfair Display';
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:54px;
 color:#d4af37;
+text-shadow:0 0 30px rgba(212,175,55,0.25);
+animation:fadeIn 1s ease;
 }
 
-.subtitle{
-margin-top:15px;
+.hero p{
+max-width:700px;
+margin:15px auto;
 color:#cfcfcf;
 font-size:18px;
+line-height:1.5;
 }
 
-.price{margin-top:20px}
-.old{text-decoration:line-through;color:#777;font-size:22px;margin-right:10px}
-.new{font-size:50px;color:#d4af37;font-weight:700}
-
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:18px 60px;
-background:linear-gradient(135deg,#d4af37,#b8962e);
-color:#000;
-font-weight:600;
-border-radius:14px;
-text-decoration:none;
-transition:.3s;
-box-shadow:0 0 40px rgba(212,175,55,.3);
+/* PREÇO */
+.price{
+margin-top:20px;
+font-size:22px;
 }
 
-.btn:hover{transform:scale(1.07)}
+.old{
+color:#888;
+text-decoration:line-through;
+margin-right:10px;
+}
 
-.badges{
-display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:20px}
-.badge{background:#080808;border:1px solid #141414;padding:8px 12px;border-radius:8px;font-size:12px;color:#bbb}
-
-.stats{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:25px}
-.stat{background:#060606;padding:20px;border-radius:12px;border:1px solid #141414;min-width:140px}
-.stat h3{color:#d4af37}
-
-section{padding:100px 20px}
-
-h2{
-text-align:center;
-font-size:40px;
-font-family:'Playfair Display';
+.new{
 color:#d4af37;
-margin-bottom:40px;
+font-size:32px;
+font-weight:bold;
+}
+
+/* BOTÃO */
+.btn{
+margin-top:25px;
+display:inline-block;
+padding:18px 42px;
+background:linear-gradient(45deg,#d4af37,#b88a2e);
+color:#000;
+font-weight:bold;
+border-radius:12px;
+text-decoration:none;
+font-size:18px;
+transition:0.3s;
+box-shadow:0 0 20px rgba(212,175,55,0.2);
+}
+
+.btn:hover{
+transform:scale(1.07);
+box-shadow:0 0 30px rgba(212,175,55,0.5);
+}
+
+/* IMAGEM */
+.img{
+margin-top:30px;
+}
+
+.img img{
+width:320px;
+border-radius:18px;
+box-shadow:0 0 60px rgba(212,175,55,0.35);
+transition:0.4s;
+}
+
+.img img:hover{
+transform:scale(1.05);
+}
+
+/* SEÇÃO */
+.section{
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
 }
 
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:22px;
-max-width:1100px;
-margin:auto;
-}
-
-.card{
-background:#050505;
-padding:26px;
-border-radius:18px;
-border:1px solid #111;
-transition:.3s;
-}
-.card:hover{transform:translateY(-8px);border-color:#d4af37}
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:14px;
-max-width:1000px;
-margin:auto;
-}
-.gallery img{width:100%;border-radius:14px;border:1px solid #111}
-
-.security{
-max-width:900px;
-margin:auto;
-background:#050505;
-border-left:4px solid #d4af37;
-padding:25px;
-border-radius:12px;
-}
-
-.testimonials{
-max-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
-.testimonial{
-background:#050505;
+.card{
+background:rgba(255,255,255,0.04);
+padding:25px;
+border-radius:15px;
+border:1px solid rgba(212,175,55,0.15);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#d4af37;
+}
+
+.card h3{
+color:#d4af37;
+margin-bottom:10px;
+}
+
+/* URGÊNCIA */
+.urgency{
+text-align:center;
+padding:50px 20px;
+background:rgba(212,175,55,0.06);
+border-top:1px solid rgba(212,175,55,0.2);
+border-bottom:1px solid rgba(212,175,55,0.2);
+}
+
+.timer{
+font-size:26px;
+color:#d4af37;
+margin-top:10px;
+}
+
+/* PROVA SOCIAL */
+.testimonials{
+text-align:center;
+padding:70px 20px;
+}
+
+.box{
+max-width:700px;
+margin:15px auto;
+background:rgba(255,255,255,0.04);
 padding:20px;
-border-radius:14px;
-border:1px solid #111;
+border-radius:12px;
+border:1px solid rgba(212,175,55,0.15);
 }
 
+/* FAQ */
 .faq{
-max-width:900px;
-margin:10px auto;
-background:#050505;
-padding:18px;
-border-radius:10px;
-border:1px solid #111;
+max-width:800px;
+margin:auto;
+padding:70px 20px;
 }
 
-.cta{text-align:center}
+.faq h2{
+text-align:center;
+color:#d4af37;
+margin-bottom:20px;
+}
 
-footer{text-align:center;padding:30px;color:#777;border-top:1px solid #111}
+.item{
+background:rgba(255,255,255,0.04);
+margin-bottom:10px;
+padding:15px;
+border-radius:10px;
+cursor:pointer;
+}
 
-.sticky{position:fixed;bottom:20px;right:20px;z-index:999}
+.answer{
+display:none;
+margin-top:10px;
+color:#ccc;
+}
 
-@media(max-width:768px){
-h1{font-size:38px}
-.new{font-size:34px}
+/* SEGURANÇA */
+.security{
+text-align:center;
+padding:40px 20px;
+font-size:12px;
+color:#777;
+max-width:800px;
+margin:auto;
+}
+
+/* CTA FIXO */
+.fixed{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#111;
+padding:15px;
+text-align:center;
+border-top:1px solid rgba(212,175,55,0.3);
+}
+
+.fixed a{
+color:#000;
+background:#d4af37;
+padding:12px 25px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(-20px);}
+to{opacity:1; transform:translateY(0);}
 }
 </style>
 </head>
+
 <body>
 
-<div class="topbar">🔥 Desconto ativo hoje: de R$49,90 por apenas R$19,90</div>
+<div class="bg"></div>
 
-<section class="hero">
-<div class="container">
-
+<div class="hero">
 <h1>💰 Ganhe Dinheiro com Celular</h1>
-<p class="subtitle">Aprenda do zero como faturar usando apenas o celular sem aparecer</p>
+<p>Um método simples e direto para começar do zero e gerar renda online sem aparecer.</p>
 
 <div class="price">
 <span class="old">R$49,90</span>
 <span class="new">R$19,90</span>
 </div>
 
-<a href="https://pay.kiwify.com.br/G5R1RhA" target="_blank" class="btn">QUERO COMEÇAR AGORA</a>
-
-<div class="badges">
-<div class="badge">📱 Apenas Celular</div>
-<div class="badge">🙈 Sem Aparecer</div>
-<div class="badge">⚡ Acesso Imediato</div>
-<div class="badge">💸 Renda Extra</div>
+<div class="img">
+<img src="https://images.unsplash.com/photo-1556741533-f6acd647d2fb?auto=format&fit=crop&w=800&q=80">
 </div>
 
-<div class="stats">
-<div class="stat"><h3>+10.000</h3><p>Alunos</p></div>
-<div class="stat"><h3>4.9★</h3><p>Avaliação</p></div>
-<div class="stat"><h3>24h</h3><p>Acesso</p></div>
+<a class="btn" href="COLE-SEU-LINK-AQUI" target="_blank">
+🔥 QUERO COMEÇAR AGORA
+</a>
 </div>
 
-</div>
-</section>
+<section class="section">
 
-<section>
-<h2>O que você vai aprender</h2>
 <div class="grid">
-<div class="card">Ganhar dinheiro sem aparecer</div>
-<div class="card">Apps que pagam pelo celular</div>
-<div class="card">Método simples iniciantes</div>
-<div class="card">Como vender online</div>
-<div class="card">Estratégias com TikTok</div>
-<div class="card">Renda extra automática</div>
+
+<div class="card">
+<h3>📱 Apenas celular</h3>
+<p>Não precisa de computador ou experiência.</p>
 </div>
+
+<div class="card">
+<h3>💸 Do zero ao lucro</h3>
+<p>Passo a passo simples para iniciantes.</p>
+</div>
+
+<div class="card">
+<h3>🚀 Sem aparecer</h3>
+<p>Trabalhe de forma totalmente anônima.</p>
+</div>
+
+<div class="card">
+<h3>🌍 Escalável</h3>
+<p>Possibilidade de aumentar ganhos com consistência.</p>
+</div>
+
+</div>
+
 </section>
 
-<section>
-<h2>Depoimentos</h2>
-<div class="testimonials">
-<div class="testimonial">"Fiz minhas primeiras vendas em 2 dias"</div>
-<div class="testimonial">"Muito simples e direto"</div>
-<div class="testimonial">"Vale muito pelo preço"</div>
+<div class="urgency">
+<h2>⚠️ Oferta limitada</h2>
+<div class="timer" id="timer">05:00</div>
 </div>
+
+<section class="testimonials">
+<h2 style="color:#d4af37;">💬 Resultados</h2>
+
+<div class="box">“Fiz minha primeira venda em poucos dias.”</div>
+<div class="box">“Muito simples e direto ao ponto.”</div>
+
 </section>
 
-<section>
-<h2>Conteúdo do E-book</h2>
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+<section class="faq">
+
+<h2>❓ Perguntas frequentes</h2>
+
+<div class="item" onclick="toggle(this)">
+<b>Preciso aparecer?</b>
+<div class="answer">Não, todo o método é anônimo.</div>
 </div>
+
+<div class="item" onclick="toggle(this)">
+<b>Funciona para iniciantes?</b>
+<div class="answer">Sim, do absoluto zero.</div>
+</div>
+
+<div class="item" onclick="toggle(this)">
+<b>Precisa investir muito?</b>
+<div class="answer">Não, é focado em baixo investimento.</div>
+</div>
+
 </section>
 
-<section>
-<h2>Compra Segura</h2>
 <div class="security">
-✔ Pagamento seguro<br>
-✔ Entrega automática<br>
-✔ Garantia 7 dias<br>
-✔ Acesso imediato
+🛡️ Site seguro: sem coleta de dados, sem formulários, redirecionamento direto para checkout oficial com HTTPS.
 </div>
-</section>
 
-<section>
-<h2>Perguntas Frequentes</h2>
-<div class="faq">Como recebo? Após pagamento no e-mail.</div>
-<div class="faq">Funciona no celular? Sim.</div>
-<div class="faq">Preciso aparecer? Não.</div>
-</section>
+<div class="fixed">
+<a href="COLE-SEU-LINK-AQUI">COMPRAR AGORA - R$19,90</a>
+</div>
 
-<section class="cta">
-<h2>Comece agora</h2>
-<a href="https://pay.kiwify.com.br/G5R1RhA" target="_blank" class="btn">COMPRAR AGORA</a>
-</section>
+<script>
+let time = 300;
+const timer = document.getElementById("timer");
 
-<footer>
-© 2026 - Ganhar Dinheiro com Celular
-</footer>
+setInterval(()=>{
+let m = Math.floor(time/60);
+let s = time%60;
+timer.innerHTML = `${m}:${s < 10 ? "0"+s : s}`;
+time--;
+if(time < 0) time = 300;
+},1000);
 
-<a href="https://pay.kiwify.com.br/G5R1RhA" target="_blank" class="btn sticky">COMPRAR</a>
+function toggle(el){
+let ans = el.querySelector(".answer");
+ans.style.display = ans.style.display === "block" ? "none" : "block";
+}
+</script>
 
 </body>
 </html>
